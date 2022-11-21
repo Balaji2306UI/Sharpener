@@ -12,3 +12,10 @@ listItems[2].style.backgroundColor = "green";
 for(let i=0;i<listItems.length;i++) {
     listItems[i].style.fontWeight = "bold";
 }
+
+//Task for getElementsByTagName()
+const li = document.getElementsByTagName('li');
+li[2].style.backgroundColor = "green";
+for(let i=0;i<li.length;i++) {
+    li[i].style.fontWeight = "bold";
+}
