@@ -10,10 +10,15 @@ form.addEventListener('submit', (e) => {
     newListItem.appendChild(document.createTextNode(inputText.value));
     inputText.value = "";
     //Delete button
-    const button = document.createElement('button');
-    button.setAttribute('class', 'btn btn-danger btn-sm float-right delete');
-    button.appendChild(document.createTextNode('X'));
-    newListItem.appendChild(button);
+    const delButton = document.createElement('button');
+    delButton.setAttribute('class', 'btn btn-danger btn-sm float-right delete');
+    delButton.appendChild(document.createTextNode('Delete'));
+    newListItem.appendChild(delButton);
+    //Edit button
+    const editButton = document.createElement('button');
+    editButton.setAttribute('class', 'btn btn-primary btn-sm float-right mr-2 edit');
+    editButton.appendChild(document.createTextNode('Edit'));
+    newListItem.appendChild(editButton);
     //Append list item to item lister
     itemList.appendChild(newListItem);
 });
