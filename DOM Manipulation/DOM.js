@@ -1,5 +1,7 @@
 const itemList = document.getElementById('items');
-const inputText = document.getElementById('item-input-text');
+const itemHeaderText = document.getElementById('item-text');
+const itemDescText = document.getElementById('item-desc');
+const filterText = document.getElementById('filter');
 const form = document.getElementById('add-item-form');
 
 form.addEventListener('submit', (e) => {
@@ -7,8 +9,17 @@ form.addEventListener('submit', (e) => {
     //new list item
     const newListItem = document.createElement('li');
     newListItem.setAttribute('class', 'list-group-item');
-    newListItem.appendChild(document.createTextNode(inputText.value));
-    inputText.value = "";
+    //List Header
+    const listHeader = document.createElement('h5');
+    listHeader.appendChild(document.createTextNode(itemHeaderText.value));
+    newListItem.appendChild(listHeader);
+    //List Description
+    const listDescription = document.createElement('p');
+    listDescription.appendChild(document.createTextNode(itemDescText.value));
+    listDescription.setAttribute('class','float-left');
+    newListItem.appendChild(listDescription);
+    itemHeaderText.value = "";
+    itemDescText.value = "";
     //Delete button
     const delButton = document.createElement('button');
     delButton.setAttribute('class', 'btn btn-danger btn-sm float-right delete');
@@ -29,4 +40,16 @@ itemList.addEventListener('click', (e) => {
             itemList.removeChild(e.target.parentElement);
         }
     }
+})
+
+filterText.addEventListener('keyup', (e) => {
+    let searchText = e.target.value.toLowerCase();
+    const listItems = itemList.getElementsByTagName('li');
+    Array.from(listItems).forEach(item => {
+        if(item.firstElementChild.textContent.includes(searchText) || item.querySelector('p').textContent.includes(searchText)) {
+            item.style.display = 'block';
+        }
+        else
+            item.style.display = 'none';
+    });
 })
