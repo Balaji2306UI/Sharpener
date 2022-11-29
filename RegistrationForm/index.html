@@ -10,45 +10,51 @@
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-    <div class="form-container">
-        <div class="form-header">
-            <h2 >Call</h2>
-            <h5 class="form-sub-title">Book a call</h5>
-            <p class="form-description">Book a call slot and our representative will call you within 1hr of selected time</p>
-            <hr>
-        </div>
-        <form>
-            <div class="form-element">
-                <label>Name</label>
-                <input id="name" type="text" placeholder="Enter you name"/>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2 >Call</h2>
+                <h5 class="form-sub-title">Book a call</h5>
+                <p class="form-description">Book a call slot and our representative will call you within 1hr of selected time</p>
+                <hr>
             </div>
-            <div class="form-element">
-                <label>Email</label>
-                <input id="email" type="email" placeholder="Enter you email"/>
-            </div>
-            <div class="form-element">
-                <label>Phone</label>
-                <input id="phone" type="number" placeholder="Enter you phone"/>
-            </div>
-            <div class="form-element" >
-                <label>Time for call</label>
-                <div id="calender-time">
-                    <input id="date" type="date" placeholder="Enter you name"/>
-                    <select>
-                        <option>9:00 AM</option>
-                        <option>11:00 AM</option>
-                        <option>1:00 PM</option>
-                        <option>3:00 PM</option>
-                        <option>5:00 PM</option>
-                        <option>7:00 PM</option>
-                    </select>
+            <form>
+                <div class="form-element">
+                    <label>Name</label>
+                    <input id="name" type="text" placeholder="Enter you name"/>
                 </div>
-            </div>
-            <div class="form-element">
-                <button type="submit">Get a call</button>
-            </div>
-        </form>
+                <div class="form-element">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="Enter you email"/>
+                </div>
+                <div class="form-element">
+                    <label>Phone</label>
+                    <input id="phone" type="number" placeholder="Enter you phone"/>
+                </div>
+                <div class="form-element" >
+                    <label>Time for call</label>
+                    <div id="calender-time">
+                        <input id="date" type="date" placeholder="Enter you name"/>
+                        <select>
+                            <option>9:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>7:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <button type="submit">Get a call</button>
+                </div>
+            </form>
+        </div>
+        <div id="display-users">
+        </div>
     </div>
+    
+    
     <script src="index.js"></script>
 </body>
 </html>
