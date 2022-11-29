@@ -7,103 +7,7 @@
     <!--<link href="style.css" rel="stylesheet"/> -->
 
     <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
-
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .form-container {
-            display: inline-block;
-            font-family: 'Poppins', sans-serif;
-            padding: 40px 30px 20px 30px;
-            border: 1px solid grey;
-            border-radius: 10px;
-        }
-        .form-header {
-            text-align: center;
-        }
-        .form-header h2 {
-            font-size: 60px;
-            display: inline-block;
-            opacity: 0.08;
-            letter-spacing: 3px;
-        }
-        .form-header .form-sub-title {
-            font-size: 20px;
-            color: orange;
-            position: relative;
-            top: -60px;
-        }
-        .form-description{
-            font-size: 10px;
-            padding:5px 0;
-        }
-        .form-header .form-description, .form-header hr {
-            position: relative;
-            top: -35px;
-        }
-        .form-element {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-        .form-element:first-child {
-            margin-top: 30px;
-        }
-        .form-container input, select {
-            width: 100%;
-            height: 30px;
-            border-radius: 3px;
-            border: 1px solid black;
-            margin-top: 5px;
-            padding-left:10px;
-        }
-        .form-container input:focus, select:focus{
-            outline: none;
-            border: 1px solid orange;
-            box-shadow: 0 0 5px orange;
-        }
-        .form-container #calender-time {
-            display: flex;
-        }
-        .form-container #calender-time input{
-            flex: 50%;
-        }
-        .form-container #calender-time select {
-            flex:50%;
-            justify-content: space-between;
-        }
-        .form-container button {
-            background-color: orange;
-            width: 100%;
-            color: white;
-            padding: 10px 0;
-            border-radius: 5px;
-            border: none;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 30px;
-        }
-
-        .form-container button:hover {
-            cursor: pointer;
-        }
-
-        form {
-            position: relative;
-            top: -30px
-        }
-    </style>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
     <div class="form-container">
@@ -144,24 +48,7 @@
                 <button type="submit">Get a call</button>
             </div>
         </form>
-
     </div>
-    <script type="text/javascript">
-        
-        const formElement = document.querySelector('form');
-        const nameElement = document.querySelector('#name');
-        const emailElement = document.querySelector('#email');
-        const phoneElement = document.querySelector('#phone');
-        const dateElement = document.querySelector("#date");
-        const timeDropdownElement = document.querySelector('select');
-
-        formElement.addEventListener("submit", (e) => {
-            e.preventDefault()
-            console.log(`Name: ${nameElement.value}
-Email: ${emailElement.value}
-Phone: ${phoneElement.value}
-Date Time: ${dateElement.value}, ${timeDropdownElement.options[timeDropdownElement.selectedIndex].value}`);
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
