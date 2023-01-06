@@ -44,3 +44,41 @@ function displayInfo_curried(percentage) {
 }
 
 displayInfo_curried(80)(1)('Excellent');
+
+class Student {
+    static objCounter = 0;
+	constructor(name, age, phone, marks) {
+		this.name = name;
+		this.age = age;
+		this.phone = phone;
+		this.marks = marks;
+        this.objectCounter();
+	}
+	checkEligibility(marks) {
+        return (age) => {
+            if(this.marks > marks && this.age > age)
+                console.log(`${this.name} is eligible`);
+            else
+                console.log(`${this.name} is not eligible`);
+        }
+		
+	}
+    objectCounter() {
+        Student.objCounter++;
+    }
+}
+
+const stud1 = new Student('S1', 22, '9999999999', 50);
+const stud2 = new Student('S2', 21, '9999999999', 70);
+const stud3 = new Student('S3', 24, '9999999999', 40);
+const stud4 = new Student('S4', 20, '9999999999', 35);
+const stud5 = new Student('S5', 25, '9999999999', 80);
+
+console.log(`${Student.objCounter} objects were created`)
+
+stud1.checkEligibility(50)(21);
+stud2.checkEligibility(50)(21);
+stud3.checkEligibility(50)(21);
+stud4.checkEligibility(50)(21);
+stud5.checkEligibility(50)(21);
+
