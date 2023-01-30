@@ -15,7 +15,7 @@ function getUserData() {
     }
     return JSON.parse(localStorage.getItem('userDetails'));
 }
-
+/*
 function addUser(e) {
     e.preventDefault();
     let newUser = {
@@ -35,6 +35,25 @@ function addUser(e) {
     localStorage.setItem('userDetails', JSON.stringify(oldData));
     resetForm();
     displayUsers();
+}
+*/
+// Changing the addUser function to use axios and post the user data to crudcrud
+function addUser(e) {
+    e.preventDefault();
+    let newUser = {
+        name: nameElement.value,
+        email: emailElement.value,
+        phone: phoneElement.value,
+        date: dateElement.value,
+        time: timeDropdownElement.options[timeDropdownElement.selectedIndex].value
+    }
+    axios
+    .post("https://crudcrud.com/api/316f3932699b4b79b2fe9c584e02b316/users", newUser)
+    .then((res) => {
+        resetForm();
+        displayUsers();
+    })
+    .catch((error) => console.error(error));
 }
 
 function displayUsers() {
