@@ -8,13 +8,26 @@ const displayElement = document.getElementById('display-users');
 let editIndex = 0;
 
 formElement.addEventListener("submit", (e) => addUser(e));
-
+/*
 function getUserData() {
     if(localStorage.getItem('userDetails') == null) {
         return localStorage.setItem('userDetails', '[]');
     }
     return JSON.parse(localStorage.getItem('userDetails'));
 }
+*/
+
+//Changing the getUserData function to use axios and get the user data from crudcrud
+function getUserData() {
+    return new Promise((resolve, reject) => {
+        axios
+        .get("https://crudcrud.com/api/316f3932699b4b79b2fe9c584e02b316/users")
+        .then((res) => resolve(res.data))
+        .catch((error) => reject(error));
+    });
+    
+}
+
 /*
 function addUser(e) {
     e.preventDefault();
@@ -56,10 +69,10 @@ function addUser(e) {
     .catch((error) => console.error(error));
 }
 
-function displayUsers() {
+async function displayUsers() {
     let listContent = document.getElementById('list-content')
     listContent.innerHTML = "";
-    let userData = getUserData();
+    let userData = await getUserData();
     userData.forEach((user, index) => {
         document.getElementById('list-header').hidden = false;
         const newListItem = document.createElement('li');
@@ -123,6 +136,6 @@ function resetForm() {
     formElement.querySelector('button').textContent = 'Get a call'
 }
 
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", function() {
     displayUsers();
-};
+});
