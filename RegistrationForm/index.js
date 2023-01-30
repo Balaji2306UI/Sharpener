@@ -99,6 +99,7 @@ displayElement.addEventListener('click', (e) => {
     }
 })
 
+/*
 function deleteUser(e) {
     let index = parseInt(e.target.parentNode.id);
     let userData = Array.from(JSON.parse(localStorage.getItem('userDetails')));
@@ -114,6 +115,18 @@ function deleteUser(e) {
     localStorage.setItem('userDetails', JSON.stringify(userData));
     displayUsers()
 }
+*/
+// Changing the deleteUser function to use axios and delete the user data from crudcrud
+function deleteUser(e) {
+    let userData = e.target.parentNode.textContent;
+    userData = userData.substring(0, userData.length - 10); // To remove the text of edit & delete buttons
+    let userId = JSON.parse(userData)._id;
+    axios
+    .delete("https://crudcrud.com/api/316f3932699b4b79b2fe9c584e02b316/users/"+userId)
+    .then((res) => displayUsers())
+    .catch((error) => console.error(error));
+}
+
 
 function editUser(e) {
     editIndex = parseInt(e.target.parentNode.id);
