@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo cart</title>
+    <!-- <link rel="stylesheet" href="style.css"/> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center bg-dark bg-gradient text-light">
+                <h2>BuyKart
+                <i class="fa-brands fa-opencart  text-warning"></i>
+            </h2>
+            </div>
+            <div class="card-body p-5">
+                <form class="row">
+                    <div class="col-md-3 col-sm-12 ">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-tag"></i></span>
+                            <input id="name" type="text" class="form-control" placeholder="Enter product name"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i></i></i></span>
+                            <input id="price" type="number" class="form-control" placeholder="Enter product price"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12" >
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-list-ul"></i></span>
+                            <select id="category" class="form-select">
+                                <option selected>Choose category</option>
+                                <option>Beauty products</option>
+                                <option>Home Appliances</option>
+                                <option>Grocery</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3 col-sm-12 d-grid">
+                        <button class="btn btn-warning" type="submit">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="display-orders" class="card text-center mt-5 mx-auto col-md-6">
+            <div class="card-header bg-dark bg-gradient text-light">
+                <h2>Summary</h2>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#beauty">Beauty products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#home">Home Appliances</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#grocery">Grocery</a>
+                    </li>
+                  </ul>
+                <div id="display-orders" class="tab-content">
+                    <div id="beauty" class="tab-pane fade active">
+                        <ul class="list-group">
+                            <!-- <li class="list-group-item">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="Item1 - Rs.90" disabled>
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </li> -->
+                            
+                        </ul>
+                    </div>
+                    <div id="home" class="tab-pane fade">
+                        <ul class="list-group">
+                            
+                        </ul>
+                    </div>
+                    <div id="grocery" class="tab-pane fade">
+                        <ul class="list-group">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
