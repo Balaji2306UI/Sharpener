@@ -45,6 +45,17 @@
     border-radius: 12px;
     margin-left: 10px
   }
+
+  .expense-item__add-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+    margin-left: 10px
+  }
   
   @media (min-width: 580px) {
     .expense-item__description {
@@ -58,7 +69,7 @@
       font-size: 1.25rem;
     }
   
-    .expense-item__price, .expense-item__delete-btn {
+    .expense-item__price, .expense-item__delete-btn, .expense-item__add-btn {
       font-size: 1.25rem;
       padding: 0.5rem 1.5rem;
     }
