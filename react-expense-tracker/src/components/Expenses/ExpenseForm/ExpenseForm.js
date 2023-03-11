@@ -18,7 +18,17 @@ const ExpenseForm = () => {
         setEnteredDate(event.target.value);
     };
 
-  return (
+    function submitForm(event) {
+        event.preventDefault();
+        let expenseObj = {
+            title : enteredTitle,
+            amount : enteredAmount,
+            date : enteredDate
+        }
+        console.log(expenseObj)
+    }
+
+    return (
     <div className='new-expense'>
         <form>
             <div className='new-expense__controls'>
@@ -36,7 +46,7 @@ const ExpenseForm = () => {
                 </div>
             </div>
             <div className='new-expense__actions'>
-                <button type='submit'>Add Expense</button>
+                <button type='submit' onClick={submitForm}>Add Expense</button>
             </div>
         </form>
     </div>
