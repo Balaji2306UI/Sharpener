@@ -25,7 +25,6 @@ function App() {
 	function onAddNewExpense(expense) {
 
 		setExpensesData((prevState) => {
-			console.log(prevState)
 			return [expense, ...prevState]
 		});
 	}
