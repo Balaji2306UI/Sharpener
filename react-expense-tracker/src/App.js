@@ -5,12 +5,14 @@ import ExpenseForm from "./components/Expenses/ExpenseForm/ExpenseForm";
 function App() {
     const expenses = [
         {
+			id: 0,
             title: "Medical Insurance Premium",
             amount: "Rs.10000",
             date: new Date(2023, 2, 8), //new Date(year, month, day) => month starts with 0; 0 means January
             location: "Online",
         },
         {
+			id: 1,
             title: "Grocery",
             amount: "Rs.4000",
             date: new Date(2023, 2, 7),
@@ -21,7 +23,11 @@ function App() {
 	const [expensesData, setExpensesData] = useState(expenses);
 
 	function onAddNewExpense(expense) {
-		setExpensesData([...expenses, expense]);
+
+		setExpensesData((prevState) => {
+			console.log(prevState)
+			return [expense, ...prevState]
+		});
 	}
 
     return (

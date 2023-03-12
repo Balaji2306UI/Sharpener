@@ -21,8 +21,9 @@ const ExpenseForm = (props) => {
     function submitForm(event) {
         event.preventDefault();
         let expenseObj = {
+            id : Math.random().toString(),
             title : enteredTitle,
-            amount : enteredAmount,
+            amount : 'Rs.'+enteredAmount,
             date : new Date(enteredDate)
         }
         props.onAddNewExpense(expenseObj);

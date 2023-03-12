@@ -10,7 +10,7 @@ function ExpenseItem(props) {
         e.target.parentNode.remove();
     }
     function addExpense(){
-        setAmount('Rs.100');
+        setAmount('Rs.100')
     }
     return (
         <Card className='expense-item'>
