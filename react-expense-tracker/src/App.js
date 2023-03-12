@@ -7,14 +7,14 @@ function App() {
         {
 			id: 0,
             title: "Medical Insurance Premium",
-            amount: "Rs.10000",
+            amount: 10000,
             date: new Date(2023, 2, 8), //new Date(year, month, day) => month starts with 0; 0 means January
             location: "Online",
         },
         {
 			id: 1,
             title: "Grocery",
-            amount: "Rs.4000",
+            amount: 4000,
             date: new Date(2023, 2, 7),
             location: "Pheonix Marketcity",
         },
