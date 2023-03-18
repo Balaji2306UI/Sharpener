@@ -7,9 +7,10 @@ import Products from './components/Products'
 function App() {
 	const products = [
 		{
+			id: 'g1',
 			name: 'sample',
 			price: 100,
-			category: 'home'
+			category: "Grocery"
 		}
 	];
 
@@ -21,19 +22,21 @@ function App() {
 		});
 	}
 
-	let total = 0
+	
 	function getTotal() {
-		for(product in productsData) {
-			total += product.price;
+		let total = 0
+		for(let product of productsData) {
+			total += parseInt(product.price);
 		}
+		return total;
 	}
 
     return (
         <div className="container mt-5">
-            <Card cardHeader="BetterDeals">
+            <Card classes="card" cardHeader="BetterDeals" logo="true">
 				<Form onAddNewProduct={onAddNewProduct}/>
 			</Card>
-			<Card cardHeader="Summary">
+			<Card classes="card text-center mt-5 mx-auto col-md-6" cardHeader="Summary">
 				<Products data={productsData} />
 			</Card>
 			<div>{`Total Amount: ${getTotal()}`}</div>
