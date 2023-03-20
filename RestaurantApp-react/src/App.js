@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import HeaderSummary from "./components/HeaderSummary";
 import MenuList from "./components/MenuList";
 import "./css/styles.css";
+import Cart from "./components/Cart";
 
 function App() {
 	const menutItems = [
@@ -39,6 +40,7 @@ function App() {
 	];
     return (
         <React.Fragment>
+			<Cart />
 			<main>
 				<Header title="Chef's Kitchen" />
 				<HeaderSummary />
