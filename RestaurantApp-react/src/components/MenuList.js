@@ -5,14 +5,16 @@ import MenuListItem from "./MenuListItem";
 
 function MenuItems(props) {
     return (
-        <div class="menu-items">
+        <div class="menu-list">
             {props.data.map((item) => {
                 return (
-                    <li class="menu-list-item">
+                    <li key={item.id} class="menu-list-item">
                         <MenuListItem
+                            id={item.id}
                             name={item.name}
                             description={item.description}
                             cost={item.cost}
+                            count={item.count}
                         />
                     </li>
                 );

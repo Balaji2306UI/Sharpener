@@ -3,10 +3,20 @@ import React from "react";
 function MenuListItem(props) {
     return (
         <>
-            <h4>{props.name}</h4>
-            <p class="dish-desc">{props.description}</p>
-            <p class="dish-price">{`Rs.${props.cost}`}</p>
-            <hr/>
+            <div className="menu-item-details">
+                <h4 className="dish-name">{props.name}</h4>
+                <p className="dish-desc">{props.description}</p>
+                <p className="dish-price">{`Rs.${props.cost}`}</p>
+            </div>
+            <div class="menu-item-form">
+                <button className="btn">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+                <span className="dish-count">{props.count}</span>
+                <button className="btn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
         </>
     );
 }

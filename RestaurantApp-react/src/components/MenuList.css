@@ -1,4 +1,4 @@
-.menu-items {
+.menu-list {
     width: 700px;
     background-color: rgba(50, 49, 49);
     color: white;
@@ -8,24 +8,56 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-.menu-items .dish-desc {
+.menu-list .dish-desc {
     font-style: italic;
+    opacity: 0.7;
 }
 
-.menu-items .dish-price {
+.menu-list .dish-price {
     color: rgb(45, 171, 221);
 }
 
-.menu-items li {
+.menu-list li {
     list-style: none;
+    border-bottom: 1px solid rgb(82, 80, 80);
+    padding-bottom: 15px;
 }
 
-
-
-.menu-items > *, .menu-list-item > *{
-    margin-bottom: 10px;
+.menu-item-details > * {
+    margin-bottom: 5px;
 }
 
 .menu-list-item {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
+
+.dish-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dish-count {
+    margin: 0 10px;
+}
+
+.menu-item-form {
+    border-radius: 5px;
+    background-color: rgb(45, 171, 221);
+    color: black;
+}
+
+.menu-item-form .btn {
+    background-color: transparent;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: none
+}
+
+.menu-item-form .btn:hover {
+    cursor: pointer;
+}
+
+

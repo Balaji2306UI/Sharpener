@@ -2,27 +2,45 @@ import React from "react";
 
 import Header from "./components/Header";
 import HeaderSummary from "./components/HeaderSummary";
-import MenuItems from "./components/MenuList";
+import MenuList from "./components/MenuList";
 import "./css/styles.css";
 
 function App() {
 	const menutItems = [
 		{
-			name: 'sample1',
+			id: 'm1',
+			name: 'Idly',
 			description: 'An Indian specialty!',
-			cost: 100
+			cost: 10,
+			count: 0
 		},
 		{
-			name: 'sample2',
+			id: 'm2',
+			name: 'Masal Dosa',
 			description: 'An Indian specialty!',
-			cost: 200
+			cost: 60,
+			count: 0
+		},
+		{
+			id: 'm3',
+			name: 'sample1',
+			description: 'An Indian specialty!',
+			cost: 100,
+			count: 0
+		},
+		{
+			id: 'm4',
+			name: 'Fired Rice',
+			description: 'An Indian specialty!',
+			cost: 100,
+			count: 0
 		}
 	];
     return (
         <React.Fragment>
             <Header title="Chef's Kitchen" />
             <HeaderSummary />
-			<MenuItems data={menutItems} />
+			<MenuList data={menutItems} />
         </React.Fragment>
     );
 }
