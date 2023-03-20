@@ -7,3 +7,22 @@
 body {
     background-color: rgb(214, 212, 212)
 }
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-orange {
+    color: #ff751a
+}
+
+.bg-orange {
+    background-color: #ff751a;
+}

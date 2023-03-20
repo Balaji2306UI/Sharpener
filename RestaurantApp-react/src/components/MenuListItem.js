@@ -6,9 +6,9 @@ function MenuListItem(props) {
             <div className="menu-item-details">
                 <h4 className="dish-name">{props.name}</h4>
                 <p className="dish-desc">{props.description}</p>
-                <p className="dish-price">{`Rs.${props.cost}`}</p>
+                <p className="dish-price text-orange">{`Rs.${props.cost}`}</p>
             </div>
-            <div class="menu-item-form">
+            <div class="menu-item-form bg-orange">
                 <button className="btn">
                     <i class="fa-solid fa-minus"></i>
                 </button>

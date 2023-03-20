@@ -1,4 +1,5 @@
 import React from "react";
+import WrapperContainer from "./components/WrapperContainer";
 
 import Header from "./components/Header";
 import HeaderSummary from "./components/HeaderSummary";
@@ -38,9 +39,13 @@ function App() {
 	];
     return (
         <React.Fragment>
-            <Header title="Chef's Kitchen" />
-            <HeaderSummary />
-			<MenuList data={menutItems} />
+			<main>
+				<Header title="Chef's Kitchen" />
+				<HeaderSummary />
+			</main>
+            <WrapperContainer>
+				<MenuList data={menutItems} />
+			</WrapperContainer>
         </React.Fragment>
     );
 }

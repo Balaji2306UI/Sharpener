@@ -12,7 +12,7 @@ function Header(props) {
             <div className="cart-notification">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>your cart</span>
-                <span className="badge">0</span>
+                <span className="badge bg-orange">0</span>
             </div>
         </header>
     );

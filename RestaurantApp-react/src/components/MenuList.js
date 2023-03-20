@@ -1,11 +1,12 @@
 import React from "react";
 
 import "./MenuList.css";
+import "../css/styles.css";
 import MenuListItem from "./MenuListItem";
 
 function MenuItems(props) {
     return (
-        <div class="menu-list">
+        <div className="menu-list">
             {props.data.map((item) => {
                 return (
                     <li key={item.id} class="menu-list-item">
