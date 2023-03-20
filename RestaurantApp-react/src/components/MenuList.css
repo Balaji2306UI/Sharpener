@@ -1,0 +1,31 @@
+.menu-items {
+    width: 700px;
+    background-color: rgba(50, 49, 49);
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.menu-items .dish-desc {
+    font-style: italic;
+}
+
+.menu-items .dish-price {
+    color: rgb(45, 171, 221);
+}
+
+.menu-items li {
+    list-style: none;
+}
+
+
+
+.menu-items > *, .menu-list-item > *{
+    margin-bottom: 10px;
+}
+
+.menu-list-item {
+    margin-bottom: 20px;
+}
