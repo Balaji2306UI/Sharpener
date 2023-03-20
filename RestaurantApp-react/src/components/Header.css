@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(45, 171, 221)
+    color: rgb(45, 171, 221);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .header .logo i {
