@@ -40,15 +40,16 @@
 }
 
 .menu-item-form {
-    border-radius: 5px;
-    color: black;
+    border-radius: 20px;
+    color: white;
 }
 
 .menu-item-form .btn {
     background-color: transparent;
     font-size: 15px;
     padding: 10px 15px;
-    border: none
+    border: none;
+    color: white
 }
 
 .menu-item-form .btn:hover {
