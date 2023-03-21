@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import WrapperContainer from "./components/WrapperContainer";
 
 import Header from "./components/Header";
@@ -38,11 +38,22 @@ function App() {
 			count: 0
 		}
 	];
+
+	const [isCartShown, setIsCartShown] = useState(false);
+
+	function showCartHandler() {
+		setIsCartShown(true);
+	}
+
+	function hideCartHandler() {
+		setIsCartShown(false);
+	}
+
     return (
         <React.Fragment>
-			<Cart />
+			{isCartShown && <Cart onClose={hideCartHandler} />}
 			<main>
-				<Header title="Chef's Kitchen" />
+				<Header title="Chef's Kitchen" showCartHandler={showCartHandler} />
 				<HeaderSummary />
 			</main>
             <WrapperContainer>
