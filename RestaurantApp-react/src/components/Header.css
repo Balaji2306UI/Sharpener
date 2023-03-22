@@ -49,7 +49,7 @@ main {
 .cart-notification .badge {
     padding: 5px 15px;
     border-radius: 20px;
-    color: black
+    color: white
 }
 
 .cart-notification > * {

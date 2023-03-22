@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./MenuList.css";
 import "../css/styles.css";
 import MenuListItem from "./MenuListItem";
+import CartContext from "../store/cart-context";
 
-function MenuItems(props) {
+function MenuItems() {
+    const cartCtx = useContext(CartContext);
+
     return (
         <div className="menu-list">
-            {props.data.map((item) => {
+            {cartCtx.items.map((item) => {
                 return (
                     <li key={item.id} class="menu-list-item">
                         <MenuListItem

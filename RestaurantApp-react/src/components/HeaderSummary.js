@@ -5,11 +5,11 @@ import restaurantImage from "../assets/Restaurant-bg.jpg";
 
 function HeaderSummary() {
     return (
-        <div class="summary-description">
+        <div className="summary-description">
             <img src={restaurantImage} alt="Restaurant view" />
             <h1 style={{ marginBottom: "30px" }}>
-                Delicious <span class="text-orange">Food</span>, Delivered To{" "}
-                <span class="text-orange">You</span>
+                Delicious <span className="text-orange">Food</span>, Delivered To{" "}
+                <span className="text-orange">You</span>
             </h1>
             <p>
                 Choose your favourite meal from our braod selection of available

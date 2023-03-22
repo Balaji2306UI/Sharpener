@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../store/cart-context";
 
 import './Header.css'
 
 function Header(props) {
+    const cartCtx = useContext(CartContext);
+
+    let totalCartItems = cartCtx.items.reduce((totalItems, item) => {
+        return totalItems + item.count
+    }, 0);
+
     return (
         <header className="header">
-            <div class="logo">
-                <i class="fa-solid fa-utensils"></i>
+            <div className="logo">
+                <i className="fa-solid fa-utensils"></i>
                 <h1>{props.title}</h1>
             </div>
             <button className="cart-notification" onClick={props.showCartHandler}>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
                 <span>your cart</span>
-                <span className="badge bg-orange">0</span>
+                <span className="badge bg-orange">{totalCartItems}</span>
             </button>
         </header>
     );
