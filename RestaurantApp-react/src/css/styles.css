@@ -26,3 +26,7 @@ html, body {
 .bg-orange {
     background-color: #ff751a;
 }
+
+.rupee-sign {
+    font-family: 'Roboto', sans-serif;
+}

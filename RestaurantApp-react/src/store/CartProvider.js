@@ -37,11 +37,12 @@ function CartProvider(props) {
     const [totalAmount, setTotalAmount] = useState(0);
 
     const addItemToCartHandler = (id) => {
+        console.log("Inside Add=>", id)
         menu.forEach((item) => {
             if (item.id === id) {
                 item.count++;
                 setTotalAmount((prevTotal) => {
-                    return prevTotal + (item.count * item.cost);
+                    return prevTotal + item.cost;
                 })
             }
         });
@@ -53,6 +54,9 @@ function CartProvider(props) {
         menu.forEach((item) => {
             if (item.id === id && item.count !== 0) {
                 item.count--;
+                setTotalAmount((prevTotal) => {
+                    return prevTotal - item.cost;
+                })
             }
         });
         setMenu([...menu]);
@@ -61,7 +65,7 @@ function CartProvider(props) {
 
     const cartContext = {
         items: menu,
-        totalAmount: 0,
+        totalAmount: totalAmount,
         addItem: addItemToCartHandler,
         removeItem: removeItemFromCartHandler,
     };
