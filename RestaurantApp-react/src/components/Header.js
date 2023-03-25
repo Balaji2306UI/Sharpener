@@ -13,7 +13,7 @@ function Header(props) {
     return (
         <header className="header">
             <div className="logo">
-                <i className="fa-solid fa-utensils"></i>
+                <i class="fa-solid fa-burger"></i>
                 <h1>{props.title}</h1>
             </div>
             <button className="cart-notification" onClick={props.showCartHandler}>
