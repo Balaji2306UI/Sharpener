@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  background: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 6rem;
+}
+
+.notification-icon {
+  position: relative;
+}
+
+.notification-icon i {
+  font-size: 25px;
+}
+
+.notification-icon .badge {
+  padding: 5px 8px;
+  font-size: 10px;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-weight: bold;
+}
+
+
+.notification-icon:hover {
+  cursor: pointer;
+}
+
+.product-item-form {
+  border-radius: 20px;
+  color: white;
+}
+
+.product-item-form .btn {
+  background-color: transparent;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: none;
+  color: white
+}
+
+.product-item-form .btn:hover {
+  cursor: pointer;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

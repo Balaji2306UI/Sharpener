@@ -1,0 +1,62 @@
+main {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px 40px;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ff751a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.header .logo i {
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.header .logo h1{
+    font-weight: 600;
+    display: inline-block;
+    font-family: cursive;
+}
+
+.cart-notification {
+    padding: 15px 30px;
+    background-color: rgb(68, 65, 65);
+    border-radius: 25px;
+    font-size: 20px;
+    color: white;
+    border: none
+}
+
+.cart-notification .badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: white
+}
+
+.cart-notification > * {
+    margin: 0 10px;
+}
+
+.cart-notification:hover {
+    cursor: pointer;
+    background-color: rgb(63, 62, 62);
+}

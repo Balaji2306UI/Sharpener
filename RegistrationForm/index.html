@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="style.css" rel="stylesheet"/> -->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2 >Call</h2>
+                <h5 class="form-sub-title">Book a call</h5>
+                <p class="form-description">Book a call slot and our representative will call you within 1hr of selected time</p>
+                <hr>
+            </div>
+            <form>
+                <div class="form-element">
+                    <label>Name</label>
+                    <input id="name" type="text" placeholder="Enter you name"/>
+                </div>
+                <div class="form-element">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="Enter you email"/>
+                </div>
+                <div class="form-element">
+                    <label>Phone</label>
+                    <input id="phone" type="number" placeholder="Enter you phone"/>
+                </div>
+                <div class="form-element" >
+                    <label>Time for call</label>
+                    <div id="calender-time">
+                        <input id="date" type="date" placeholder="Enter you name"/>
+                        <select>
+                            <option>9:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>7:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <button type="submit">Get a call</button>
+                </div>
+            </form>
+        </div>
+        <div id="display-users">
+            <h4 id="list-header" hidden>Registered Users</h4>
+            <div id="list-content">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="style.css" rel="stylesheet"/> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Orders</h2>
+                <h5 class="form-sub-title">Place your Order</h5>
+                <hr>
+            </div>
+            <form>
+                <div class="form-element">
+                    <label>Dish Name</label>
+                    <input id="name" type="text" placeholder="Enter dish name"/>
+                </div>
+                <div class="form-element">
+                    <label>Price</label>
+                    <input id="price" type="number" placeholder="Enter dish price"/>
+                </div>
+                <div class="form-element" >
+                    <label>Table</label>
+                    <select>
+                        <option>Table 1</option>
+                        <option>Table 2</option>
+                        <option>Table 3</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <button type="submit">Place order</button>
+                </div>
+            </form>
+        </div>
+        <div id="display-orders">
+            <h4 id="list-header" hidden>Placed Orders</h4>
+                <div id="table-one">
+                    <h3>Table one orders</h3>
+                    <div id="table-one-orders"></div>
+                </div>
+                <div id="table-two">
+                    <h3>Table two orders</h3>
+                    <div id="table-two-orders"></div>
+                </div>
+                <div id="table-three">
+                    <h3>Table three orders</h3>
+                    <div id="table-three-orders"></div>
+                </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

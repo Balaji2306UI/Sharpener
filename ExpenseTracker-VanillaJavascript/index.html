@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <h2 class="app-header">Expense Tracker</h2>
+
+    <div class="container" style="display:flex">
+        <div>
+            <div class="account-balance">
+                <h5 class="bold">YOUR BALANCE</h5>
+                <h2 class="bold" id="balance">$0.00</h2>
+                <div class="inc-exp-container">
+                    <div>
+                        <h5 class="bold">INCOME</h5>
+                        <p id="money-plus" class="money plus">+$0.00</p>
+                    </div>
+                    <div>
+                        <h5 class="bold">EXPENSE</h5>
+                        <p id="money-minus" class="money minus">-$0.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transaction-form">
+                <h5 class="sub-heading bold">Add new transaction</h5>
+                <form id="form">
+                    <div class="form-group">
+                        <label for="text">Text</label>
+                        <input class="form-control" type="text" id="text" placeholder="Enter text..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input class="form-control" type="number" id="amount" placeholder="Enter amount..." />
+                        <small id="emailHelp" class="form-text text-muted">(negative - expense, positive - income)</small>
+                    </div>
+                    <button class="btn btn-primary btn-block">Add transaction</button>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <h5 class="sub-heading bold">History</h5>
+            <ul id="list" class="list">
+                <!-- <li class="minus">
+                Cash <span>-$400</span><button class="delete-btn">x</button>
+                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

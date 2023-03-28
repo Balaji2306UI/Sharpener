@@ -1,0 +1,59 @@
+.menu-list {
+    width: 700px;
+    background-color: rgba(50, 49, 49);
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.menu-list .dish-desc {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.menu-list li {
+    list-style: none;
+    border-bottom: 1px solid rgb(82, 80, 80);
+    padding-bottom: 15px;
+}
+
+.menu-item-details > * {
+    margin-bottom: 5px;
+}
+
+.menu-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.dish-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dish-count {
+    margin: 0 10px;
+}
+
+.menu-item-form {
+    border-radius: 20px;
+    color: white;
+}
+
+.menu-item-form .btn {
+    background-color: transparent;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: none;
+    color: white
+}
+
+.menu-item-form .btn:hover {
+    cursor: pointer;
+}
+
+
